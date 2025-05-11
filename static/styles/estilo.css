@@ -1,0 +1,181 @@
+/* Estilo Geral do Body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5; /* Fundo neutro e claro */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte limpa e moderna */
+    color: #333333; /* Texto em cinza escuro */
+    transition: all 0.3s ease;
+}
+
+/* Estilo do Container Principal */
+.container {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container li {
+    list-style-type: none;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333333; /* Texto em cinza escuro */
+    cursor: default;
+}
+
+.container h1 {
+    margin-bottom: 18px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333333; /* Título em cinza escuro */
+    text-align: center;
+}
+
+.container h2 {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #555555; /* Subtítulo em cinza médio */
+}
+
+.container label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #090612; /* Texto em cinza escuro */
+    cursor: default;
+}
+
+/* Estilo de Botões */
+.container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #005ca9; /* Azul SENAC */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-style: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.container button:hover {
+    background-color: #004a87; /* Azul SENAC mais escuro ao passar o mouse */
+}
+
+.container button:active {
+    background-color: #003a6b; /* Azul SENAC ainda mais escuro ao clicar */
+}
+
+/* Estilo de Inputs e Selects */
+.container input,
+.container select {
+    background-color: #ffffff; /* Fundo branco */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #cccccc; /* Borda cinza clara */
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.container input:focus,
+.container select:focus {
+    outline: none;
+    border-color: #007bff; /* Azul ao focar */
+}
+
+/* Estilo do Container Secundário */
+.container2 {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 16px;
+    border-radius: 4px;
+    margin-top: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    width: 100%;
+    max-width: 600px;
+    color: #333333; /* Texto em cinza escuro */
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container2 h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #333333; /* Título em cinza escuro */
+    text-align: center;
+}
+
+.container2 p,
+.container2 ul {
+    margin-bottom: 12px;
+    color: #555555; /* Texto em cinza médio */
+}
+
+.container2 ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Estilo de Mensagens */
+.container #mensagem_deletar,
+.container #mensagem_consulta,
+.container #mensagem_erro {
+    display: flex;
+    justify-content: center;
+    color: #ea3323;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.container #mensagem_sucesso {
+    display: flex;
+    justify-content: center;
+    color: #1eb253;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Estilo para o botão de recarregar */
+.recarregar {
+    position: fixed; /* Fixa o botão na tela */
+    top: 10px; /* Distância do topo da página */
+    left: 10px; /* Distância da lateral esquerda */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.recarregar button {
+    padding: 10px 20px;
+    background-color: #f68b1f; /* Laranja SENAC */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.recarregar button:hover {
+    background-color: #d9771b; /* Laranja SENAC mais escuro ao passar o mouse */
+}
+
+.recarregar button:active {
+    background-color: #b96316; /* Laranja SENAC ainda mais escuro ao clicar */
+}

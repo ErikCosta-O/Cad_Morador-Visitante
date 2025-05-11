@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Cadastro</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <!-- Botão de recarregar fora do contêiner -->
+    <div class="recarregar">
+        <button onclick="recarregarPagina()">Recarregar Página</button>
+    </div>
+    <!-- Contêiner principal -->
+    <div class="container">
+        <!-- Título principal -->
+        <h1>Bem-vindo ao Sistema de Cadastro</h1>
+
+        <!-- Formulário para cadastrar ou atualizar -->
+        <form id="form_cadastro">
+            <h2>Cadastrar/Atualizar</h2>
+            <!-- Campo para o nome -->
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+            <!-- Campo para o telefone -->
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" name="phone" placeholder="Digite seu telefone" required oninput="formatarTelefone(this)">
+
+            <!-- Campo para o email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <!-- Campo para o tipo (Morador ou Visitante) -->
+            <label for="type">Tipo:</label>
+            <select id="type" name="type" required onchange="toggleMoradorFields()">
+                <option value="Morador">Morador</option>
+                <option value="Visitante">Visitante</option>
+            </select>
+
+            <!-- Campos adicionais para Morador -->
+            <div id="morador_fields">
+                <label for="apartamento">Apartamento:</label>
+                <input type="text" id="apartamento" name="apartamento" placeholder="Digite o número do apartamento">
+
+                <label for="bloco">Bloco:</label>
+                <input type="text" id="bloco" name="bloco" placeholder="Digite o bloco">
+            </div>
+
+            <!-- Botões para criar ou atualizar cadastro -->
+            <button onclick="criarCadastro(event)">Criar Cadastro</button>
+            <button onclick="atualizarCadastro(event)">Atualizar Cadastro</button>
+
+            <!-- Mensagens de erro ou sucesso -->
+            <div class="mensagens">
+                <p id="mensagem_erro"></p>
+                <p id="mensagem_sucesso"></p>
+            </div>
+        </form>
+
+        <!-- Seção para listar cadastros -->
+        <h2>Listar todos os cadastros</h2>
+        <ul id="lista_cadastros" style="list-style-type: none; padding: 0;"></ul>
+        <button onclick="listarCadastros()">Listar Todos</button>
+
+        <!-- Seção para consultar cadastros -->
+        <h2>Consultar Cadastro</h2>
+        <!-- Campo para consultar por nome -->
+        <input type="text" id="nome_consulta" placeholder="Digite o nome para consulta">
+        <!-- Campo para consultar por email -->
+        <input type="text" id="email_consulta" placeholder="Digite o email para consulta">
+        <button onclick="consultarCadastro()">Consultar</button>
+
+        <!-- Div para exibir mensagens de erro ou sucesso -->
+        <div id="mensagem_consulta"></div>
+
+        <ul id="resultado_consulta"></ul>
+
+        <!-- Formulário para deletar cadastro -->
+        <h2>Deletar Cadastro</h2>
+        <form id="form_deletar" onsubmit="event.preventDefault(); deletarCadastro();">
+            <label for="nome_delete">Nome:</label>
+            <input type="text" id="nome_delete" name="nome_delete" placeholder="Digite o nome para deletar" required>
+
+            <label for="email_delete">Email:</label>
+            <input type="email" id="email_delete" name="email_delete" placeholder="Digite o email para deletar" required>
+
+            <button type="button" onclick="deletarCadastro()">Consultar para Deletar</button>
+
+            <!-- Div para exibir mensagens de erro ou sucesso -->
+            <div id="mensagem_deletar"></div>
+        </form>
+        <ul id="resultado_deletar"></ul>
+    </div>
+
+    <div class="container2">
+        <h2>Sobre o Sistema de Cadastro</h2>
+        <p>
+            Este sistema foi desenvolvido para gerenciar o cadastro de moradores e visitantes de forma eficiente. 
+            Ele permite realizar as seguintes operações:
+        </p>
+        <ul>
+            <li><strong>Cadastrar:</strong> Adicione novos moradores ou visitantes ao sistema, informando dados como nome, telefone, email, tipo (morador ou visitante), apartamento e bloco.</li>
+            <li><strong>Atualizar:</strong> Modifique os dados de um cadastro existente, garantindo que as informações estejam sempre atualizadas.</li>
+            <li><strong>Listar:</strong> Visualize todos os cadastros registrados no sistema de forma organizada.</li>
+            <li><strong>Consultar:</strong> Pesquise um cadastro específico utilizando o nome ou email como critério de busca.</li>
+            <li><strong>Deletar:</strong> Remova cadastros que não são mais necessários, utilizando o email como identificador.</li>
+        </ul>
+        <p>
+            O sistema foi projetado para ser simples e intuitivo, com uma interface amigável e suporte a operações básicas de CRUD (Create, Read, Update, Delete). 
+            Ele é ideal para condomínios, prédios residenciais ou qualquer ambiente que necessite de um controle eficiente de acesso.
+        </p>
+    </div>
+    <!-- Link para o arquivo JavaScript -->
+    <script src="../static/crud.js"></script>
+</body>
+</html>
