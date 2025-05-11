@@ -1,6 +1,6 @@
 /* Estilo Geral do Body */
 body {
-    margin: 0;
+    margin: 10vh;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -16,10 +16,10 @@ body {
 /* Estilo do Container Principal */
 .container {
     background-color: #ffffff; /* Fundo branco */
-    padding: 20px;
+    padding: 30px;
     border-radius: 4px; /* Bordas levemente arredondadas */
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ body {
     margin-bottom: 18px;
     font-size: 28px;
     font-weight: bold;
-    color: #333333; /* Título em cinza escuro */
+    color: #0f0f0f; /* Título em cinza escuro */
     text-align: center;
 }
 
@@ -47,13 +47,13 @@ body {
     width: 100%;
     margin-bottom: 12px;
     font-size: 20px;
-    color: #555555; /* Subtítulo em cinza médio */
+    color: #2e2e2e; /* Subtítulo em cinza médio */
 }
 
 .container label {
     font-size: 18px;
     font-weight: 500;
-    color: #090612; /* Texto em cinza escuro */
+    color: #454545; /* Texto em cinza escuro */
     cursor: default;
 }
 
@@ -103,12 +103,12 @@ body {
 /* Estilo do Container Secundário */
 .container2 {
     background-color: #ffffff; /* Fundo branco */
-    padding: 16px;
+    padding: 30px;
     border-radius: 4px;
     margin-top: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     color: #333333; /* Texto em cinza escuro */
     font-size: 14px;
     line-height: 1.5;
