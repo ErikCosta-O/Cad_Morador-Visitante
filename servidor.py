@@ -4,7 +4,7 @@ import sqlite3
 app = Flask(__name__, template_folder='templates')
 
 # Caminho do banco de dados
-caminho_banco = r'C:\Users\ERIK\Documents\Pi_Redes\cadastro.db'
+caminho_banco = 'cadastro.db'
 
 # Rota para exibir a página HTML
 @app.route('/', methods=['GET'])
@@ -147,4 +147,6 @@ def atualizar():
             con.close()
 
 if __name__ == '__main__':
-    app.run(host='192.168.0.198', port=5000, debug=True)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
